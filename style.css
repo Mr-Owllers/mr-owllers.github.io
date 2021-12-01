@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "IBM Model3x Alt4";
+    src: url(fonts/Web437_IBM_Model3x_Alt4.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: "IBM Model3x Alt4", monospace;
+}
+
+body {
+    padding: 25px;
+    background-color: rgb(179, 207, 207);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+  }
+  .dark-mode {
+    background-color: rgb(41, 41, 41);
+    color: white;
+  }
+
+#discord {
+    fill: #5865F2
+}
+#github {
+    fill: #181717
+}
+ul#socials{
+    list-style: none;
+    margin: 0 0 0 0;
+}
+a:link {
+    color: rgb(114, 114, 114);
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(114, 114, 114);
+    text-decoration: none;
+}
+a:hover {
+    color: #2088FF;
+    text-decoration: underline #2088FF;
+}
+
+#youtube {
+    fill: #FF0000;
+}
+
+footer p span a:hover {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+small.footnote{
+    color: rgb(39, 126, 75);
+}
+
+small.footnote a {
+    color: rgb(15, 100, 51);
+}
+
+small.footnote a:hover {
+    color: cornflowerblue;
+}
+
+@media screen and (max-width: 600px){
+    p.socials {
+        display: none;
+    }
+    html {
+        font-size: 1.5em;
+    }
+    small#back {
+        display: none;
+    }
+}
