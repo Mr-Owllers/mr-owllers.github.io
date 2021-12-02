@@ -1,2 +1,2 @@
 # mr-owllers.github.io
-my first website
+my first public website
