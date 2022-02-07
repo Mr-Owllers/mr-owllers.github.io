@@ -5,7 +5,7 @@
     font-style: normal;
 }
 
-html {
+* {
     font-family: "IBM Model3x Alt4", monospace;
 }
 
@@ -14,11 +14,15 @@ body {
     background-color: rgb(179, 207, 207);
     color: rgb(0, 0, 0);
     font-size: 25px;
-  }
-  .dark-mode {
+}
+.dark-mode {
     background-color: rgb(41, 41, 41);
     color: white;
-  }
+}
+
+hr {
+    border: 1px solid #000;
+}
 
 #discord {
     fill: #5865F2
@@ -62,6 +66,32 @@ small.footnote a {
 
 small.footnote a:hover {
     color: cornflowerblue;
+}
+
+.prj {
+    background-color: cornflowerblue;
+    height: auto;
+    width: 20%;
+    list-style: none;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin: 5px;
+}
+
+.prj a:link {
+    color: #181717;
+    text-decoration: none;
+}
+
+.prj a:visited {
+    color: #181717;
+    text-decoration: none;
+}
+
+.prj a:hover {
+    color: #52525c;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 600px){
