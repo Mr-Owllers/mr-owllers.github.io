@@ -94,14 +94,14 @@ small.footnote a:hover {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 320px){
     p.socials {
         display: none;
     }
     html {
         font-size: 1.5em;
     }
-    small#back {
-        display: none;
+    .prj {
+        width: 75%;    
     }
 }
