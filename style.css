@@ -94,7 +94,7 @@ small.footnote a:hover {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 425px){
     p.socials {
         display: none;
     }
