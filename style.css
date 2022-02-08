@@ -11,12 +11,12 @@ html {
 
 body {
     padding: 25px;
-    background-color: rgb(179, 207, 207);
-    color: rgb(0, 0, 0);
+    background-color: #b3cfcf;
+    color: #000000;
     font-size: 25px;
 }
 .dark-mode {
-    background-color: rgb(41, 41, 41);
+    background-color: #292929;
     color: white;
 }
 
@@ -35,11 +35,11 @@ ul#socials{
     margin: 0 0 0 0;
 }
 a:link {
-    color: rgb(114, 114, 114);
+    color: #727272;
     text-decoration: none;
 }
 a:visited {
-    color: rgb(114, 114, 114);
+    color: #727272;
     text-decoration: none;
 }
 a:hover {
@@ -57,11 +57,11 @@ footer p span a:hover {
 }
 
 small.footnote{
-    color: rgb(39, 126, 75);
+    color: #277e4b;
 }
 
 small.footnote a {
-    color: rgb(15, 100, 51);
+    color: #0f6433;
 }
 
 small.footnote a:hover {
@@ -79,19 +79,44 @@ small.footnote a:hover {
     margin: 5px;
 }
 
-.prj a:link {
+.back {
+    background-color: cornflowerblue;
+    height: auto;
+    width: 5%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.bbutton:link {
     color: #181717;
     text-decoration: none;
 }
 
-.prj a:visited {
+.bbutton:visited {
     color: #181717;
     text-decoration: none;
 }
 
-.prj a:hover {
+.bbutton:hover {
     color: #52525c;
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px){
+    .back {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .prj {
+        width: 45%;
+    }
+    .back {
+        width: 15%;
+    }
 }
 
 @media screen and (max-width: 425px){
@@ -103,5 +128,8 @@ small.footnote a:hover {
     }
     .prj {
         width: 75%;    
+    }
+    .back {
+        width: 25%;
     }
 }
