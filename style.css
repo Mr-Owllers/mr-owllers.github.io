@@ -82,10 +82,10 @@ small.footnote a:hover {
 .back {
     background-color: cornflowerblue;
     height: auto;
-    width: 5%;
+    width: 6%;
     border-radius: 10px;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     font-size: 20px;
 }
 
@@ -114,9 +114,6 @@ small.footnote a:hover {
     .prj {
         width: 45%;
     }
-    .back {
-        width: 15%;
-    }
 }
 
 @media screen and (max-width: 425px){
@@ -130,6 +127,12 @@ small.footnote a:hover {
         width: 75%;    
     }
     .back {
-        width: 25%;
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .back {
+        width: 24%;
     }
 }
