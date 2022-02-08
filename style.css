@@ -85,7 +85,7 @@ small.footnote a:hover {
     width: 6%;
     border-radius: 10px;
     text-align: center;
-    padding: 5px; 
+    /* padding: 5px; */
     font-size: 20px;
 }
 
