@@ -45,11 +45,11 @@ hr {
     font-size: 20px;
 }
 
-.bbutton: {
+.bbutton {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
     color: #dddddd;
 }
-.bbutton: {
+.bbutton:link {
     text-decoration: none;
 }
 
@@ -63,16 +63,16 @@ hr {
     width: 15%;
 }
 
-.linkp{
+.linkp {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
     color: #5399ea;
 }
 
-.linkp:link{
+.linkp:link {
     text-decoration: none;
 }
 
-.linkp:hover{
+.linkp:hover {
     text-decoration: underline;
 }
 
@@ -86,7 +86,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
     .back {
         width: 10%;
     }
@@ -96,7 +96,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 425px) {
     .back {
         width: 20%;
     }
@@ -106,8 +106,8 @@ hr {
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 320px) {
     .back {
-        width: 24%;
+        width: 26%;
     }
 }
