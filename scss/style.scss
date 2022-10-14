@@ -2,9 +2,8 @@
 $bg-color: #22272e;
 $top-bg: #202029;
 $top-button: #333333;
-$top-button-hover: #545571;
-$top-button-active: #545571;
-$top-button-ahover: #323346;
+$top-button-active: #5a5c8f;
+$top-button-ahover: #46476b;
 $text-colour: #ffffff;
 $main-margin: 4px;
 
@@ -66,7 +65,7 @@ h1 {
 }
 
 .topb:hover {
-  background-color: $top-button-hover;
+  background-color: $top-button-active;
 }
 
 .topba {
@@ -150,7 +149,7 @@ h1 {
 }
 
 .mobile-menu>ul>li>.menui:hover {
-  background-color: $top-button-hover;
+  background-color: $top-button-active;
 }
 
 .mobile-menu>ul>li>.menui.menuia {
@@ -209,7 +208,7 @@ h1 {
   height: max(300px, 30vw);
   width: max(300px, 30vw);
   
-  background-color: rgb(33, 150, 243);  
+  background-color: #2196f3;  
   border-radius: 100%;
   
   position: absolute;

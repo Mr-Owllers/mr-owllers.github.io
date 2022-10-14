@@ -50,15 +50,15 @@ h1 {
 }
 
 .topb:hover {
-  background-color: #545571;
+  background-color: #5a5c8f;
 }
 
 .topba {
-  background-color: #545571;
+  background-color: #5a5c8f;
 }
 
 .topba:hover {
-  background-color: #323346;
+  background-color: #46476b;
 }
 
 .borgir {
@@ -133,15 +133,15 @@ h1 {
 }
 
 .mobile-menu > ul > li > .menui:hover {
-  background-color: #545571;
+  background-color: #5a5c8f;
 }
 
 .mobile-menu > ul > li > .menui.menuia {
-  background-color: #545571;
+  background-color: #5a5c8f;
 }
 
 .mobile-menu > ul > li > .menui.menuia:hover {
-  background-color: #323346;
+  background-color: #46476b;
 }
 
 @media screen and (max-width: 659px) {
@@ -181,7 +181,7 @@ h1 {
 .bubble {
   height: max(300px, 30vw);
   width: max(300px, 30vw);
-  background-color: rgb(33, 150, 243);
+  background-color: #2196f3;
   border-radius: 100%;
   position: absolute;
   left: 50%;
