@@ -327,6 +327,9 @@ h1 {
     top: 15px;
     margin: 4px;
   }
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 659px));
+  }
 }
 @keyframes wave {
   from, to {

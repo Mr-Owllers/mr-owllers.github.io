@@ -359,6 +359,9 @@ h1 {
     top: 15px;
     margin: $main-margin;
   }
+  .cards{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 659px));
+  }
 }
 
 // bubble
