@@ -135,8 +135,7 @@ if(localStorage.getItem("cookie") != 'true') {
 }
 
 function acceptCookie(){
-    var banner = document.getElementById("cookie-banner") || document.getElementById("cookie-banner-deny");
-    banner.id = "cookie-banner";
+    var banner = document.getElementById("cookie-banner")
     banner.innerHTML = "<img src='static/cat-happy.png' alt='happy cat'></img><p>meu- yay!</p>"
     localStorage.setItem("cookie", 'true');
     //wait 2 seconds and then hide the banner
@@ -149,7 +148,6 @@ function hideCookie(){
 
 function denyCookie(){
     var banner = document.getElementById("cookie-banner")
-    banner.id = "cookie-banner-deny";
     banner.innerHTML = "<img src='static/cat-sad.png' alt='sad cat'></img><p>meu- :(<br>system- u have made meu sad. accept the cookies to make her happy</p><button class='cookie-btn' onclick='acceptCookie()'>oki oki i take</button>"
     localStorage.setItem("cookie", 'false');
 }
