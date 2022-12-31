@@ -24,25 +24,28 @@ const animateBubble = (x) => {
     setTimeout(() => wrapper.removeChild(bubble), 2000);
 };
 window.onmousemove = (e) => animateBubble(e.clientX);
+const body = document.body;
+const topbar = document.querySelector('.top-bar');
+const topbs = document.querySelectorAll('.topb');
+const msitecolour = document.querySelector('.msite-colours');
+const sitecolour = document.querySelector('.site-colours');
+const mobilemenu = document.querySelector('.mobile-menu');
+const menuis = document.querySelectorAll('.menui');
 function colourChange() {
-    const body = document.body;
-    const topbar = document.querySelector('.top-bar');
-    const topbs = document.querySelectorAll('.topb');
-    const msitecolour = document.querySelector('.msite-colours');
-    const sitecolour = document.querySelector('.site-colours');
-    const mobilemenu = document.querySelector('.mobile-menu');
-    const menuis = document.querySelectorAll('.menui');
     if (body.classList.contains('default')) {
         body.classList.remove('default');
         body.classList.add('neon');
+        setThemeCookie('neon');
     }
     else if (body.classList.contains('neon')) {
         body.classList.remove('neon');
         body.classList.add('green');
+        setThemeCookie('green');
     }
     else if (body.classList.contains('green')) {
         body.classList.remove('green');
         body.classList.add('default');
+        setThemeCookie('default');
     }
     if (topbar.classList.contains('default')) {
         topbar.classList.remove('default');
@@ -121,3 +124,112 @@ function colourChange() {
         }
     });
 }
+if (localStorage.getItem("cookie") != 'true') {
+    document.getElementById("cookie-banner").style.display = 'flex';
+}
+else {
+    document.getElementById("cookie-banner").style.display = 'none';
+}
+function acceptCookie() {
+    var banner = document.getElementById("cookie-banner") || document.getElementById("cookie-banner-deny");
+    banner.id = "cookie-banner";
+    banner.innerHTML = "<img src='static/cat-happy.png' alt='happy cat'></img><p>meu- yay!</p>";
+    localStorage.setItem("cookie", 'true');
+    //wait 2 seconds and then hide the banner
+    setTimeout(hideCookie, 2000);
+}
+function hideCookie() {
+    document.getElementById("cookie-banner").style.display = 'none';
+}
+function denyCookie() {
+    var banner = document.getElementById("cookie-banner");
+    banner.id = "cookie-banner-deny";
+    banner.innerHTML = "<img src='static/cat-sad.png' alt='sad cat'></img><p>meu- :(<br>system- u have made meu sad. accept the cookies to make her happy</p><button class='cookie-btn' onclick='acceptCookie()'>oki oki i take</button>";
+    localStorage.setItem("cookie", 'false');
+}
+function setThemeCookie(theme) {
+    // Set the expiration date to one year from now
+    var expirationDate = new Date();
+    expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+    // Set the cookie with the name "theme" and the desired value
+    document.cookie = "theme=" + theme + "; expires=" + expirationDate.toUTCString() + "; SameSite=Strict";
+}
+// Read the cookie value
+function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2)
+        return parts.pop().split(";").shift();
+}
+var theme = getCookie("theme");
+function setTheme() {
+    if (theme == 'neon') {
+        if (body.classList.contains('default')) {
+            body.classList.remove('default');
+            body.classList.add('neon');
+        }
+        if (topbar.classList.contains('default')) {
+            topbar.classList.remove('default');
+            topbar.classList.add('neon');
+        }
+        if (msitecolour.classList.contains('default')) {
+            msitecolour.classList.remove('default');
+            msitecolour.classList.add('neon');
+        }
+        if (sitecolour.classList.contains('default')) {
+            sitecolour.classList.remove('default');
+            sitecolour.classList.add('neon');
+        }
+        if (mobilemenu.classList.contains('default')) {
+            mobilemenu.classList.remove('default');
+            mobilemenu.classList.add('neon');
+        }
+        menuis.forEach((menui) => {
+            if (menui.classList.contains('default')) {
+                menui.classList.remove('default');
+                menui.classList.add('neon');
+            }
+        });
+        topbs.forEach((topb) => {
+            if (topb.classList.contains('default')) {
+                topb.classList.remove('default');
+                topb.classList.add('neon');
+            }
+        });
+    }
+    else if (theme == 'green') {
+        if (body.classList.contains('default')) {
+            body.classList.remove('default');
+            body.classList.add('green');
+        }
+        if (topbar.classList.contains('default')) {
+            topbar.classList.remove('default');
+            topbar.classList.add('green');
+        }
+        if (msitecolour.classList.contains('default')) {
+            msitecolour.classList.remove('default');
+            msitecolour.classList.add('green');
+        }
+        if (sitecolour.classList.contains('default')) {
+            sitecolour.classList.remove('default');
+            sitecolour.classList.add('green');
+        }
+        if (mobilemenu.classList.contains('default')) {
+            mobilemenu.classList.remove('default');
+            mobilemenu.classList.add('green');
+        }
+        menuis.forEach((menui) => {
+            if (menui.classList.contains('default')) {
+                menui.classList.remove('default');
+                menui.classList.add('green');
+            }
+        });
+        topbs.forEach((topb) => {
+            if (topb.classList.contains('default')) {
+                topb.classList.remove('default');
+                topb.classList.add('green');
+            }
+        });
+    }
+}
+setTheme();
