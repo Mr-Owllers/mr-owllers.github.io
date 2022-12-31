@@ -10,25 +10,44 @@
     <link rel="icon" type="image/png" sizes="16x16" href="static/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="static/favicon_io/site.webmanifest">
 </head>
-<body>
-    <div class="top-bar">
-        <button class="topb" onclick = "redirect('/')">home</button>
-        <button class="topb topba">projects</button>
-        <button class="topb" onclick = "redirect('contacts.html')">contacts</button>
+<body class="default">
+    <div class="top-bar default">
+        <button class="topb default" onclick = "redirect('/')">home</button>
+        <button class="topb default topba">projects</button>
+        <button class="topb default" onclick = "redirect('contacts.html')">contacts</button>
+        <button class="site-colours default" onclick="colourChange()"></button>
     </div>
     <button class="borgir">
         <div class="bar"></div>
     </button>
-    <div class="mobile-menu">
+    <div class="mobile-menu default">
         <ul>
-            <li><button class="menui" onclick = "redirect('/')">home</button></li>
-            <li><button class="menui menuia">projects</button></li>
-            <li><button class="menui" onclick = "redirect('contacts.html')">contacts</button></li>
+            <li><button class="menui default" onclick = "redirect('/')">home</button></li>
+            <li><button class="menui default menuia">projects</button></li>
+            <li><button class="menui default" onclick = "redirect('contacts.html')">contacts</button></li>
+            <li><button class="msite-colours default" onclick="colourChange()"></button></li>
         </ul>
     </div>
     <main>
         <h1>🚀 some of my projects</h1>
-        <p>W.I.P</p>
+        <div class="cards">
+            <div class="card" onclick="redirect('/treefacts')">
+                <h3>TreeFacts</h3>
+                <p>An cli that tells facts about trees</p>
+            </div>
+            <div class="card" onclick="redirect('https:/\/github.com/mr-owllers/owll-is-alive')">
+                <h3>Owll</h3>
+                <p>My very own discord bot</p>
+            </div>
+            <div class="card" onclick="redirect('/To-Idua')">
+                <h3>To-Idua</h3>
+                <p>a TODO list like Idea-manager™️ (lol) for the command line.</p>
+            </div>
+            <div class="card" onclick="redirect('/green-tea')">
+                <h3>green-tea</h3>
+                <p>a simple cli that keeps your screen awake</p>
+            </div>
+        </div>
     </main>
     <footer>
         <div id="bubble-wrapper">

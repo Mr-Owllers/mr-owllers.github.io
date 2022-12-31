@@ -10,20 +10,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="static/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="static/favicon_io/site.webmanifest">
 </head>
-<body>
-    <div class="top-bar">
-        <button class="topb topba">home</button>
-        <button class="topb" onclick = "redirect('projects.html')">projects</button>
-        <button class="topb" onclick = "redirect('contacts.html')">contacts</button>
+<body class="default">
+    <div class="top-bar default">
+        <button class="topb default topba">home</button>
+        <button class="topb default" onclick = "redirect('projects.html')">projects</button>
+        <button class="topb default" onclick = "redirect('contacts.html')">contacts</button>
+        <button class="site-colours default" onclick="colourChange()"></button>
     </div>
     <button class="borgir">
         <div class="bar"></div>
     </button>
-    <div class="mobile-menu">
+    <div class="mobile-menu default">
         <ul>
-            <li><button class="menui menuia">home</button></li>
-            <li><button class="menui" onclick = "redirect('projects.html')">projects</button></li>
-            <li><button class="menui" onclick = "redirect('contacts.html')">contacts</button></li>
+            <li><button class="menui default menuia">home</button></li>
+            <li><button class="menui default" onclick = "redirect('projects.html')">projects</button></li>
+            <li><button class="menui default" onclick = "redirect('contacts.html')">contacts</button></li>
+            <li><button class="msite-colours default" onclick="colourChange()"></button></li>
         </ul>
     </div>
     <main>

@@ -5,6 +5,19 @@ $top-button: #333333;
 $top-button-active: #6264a3;
 $top-button-ahover: #56588a;
 $text-colour: #ffffff;
+// neon
+$nbg-color: #3F0071;
+$ntop-bg: #4e0d83;
+$ntop-button: #FB2576;
+$ntop-button-active: #332FD0;
+$ntop-button-ahover: #0002A1;
+// green
+$gbg-color: #557153;
+$gtop-bg: #475f45;
+$gtop-button: #7D8F69;
+$gtop-button-active: #A9AF7E;
+$gtop-button-ahover: #E6E5A3;
+
 $main-margin: 4px;
 
 // css
@@ -17,6 +30,14 @@ body {
     background-color: $bg-color;
     font-size: 15px;
     margin: 0px;
+}
+
+body.neon{
+  background-color: $nbg-color;
+}
+
+body.green{
+  background-color: $gbg-color;
 }
 
 main {
@@ -46,8 +67,16 @@ h1 {
   left: 0;
   width: 100%;
   display: grid;
-  grid-template-columns: 0.1fr 0.1fr 0.1fr;
+  grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr;
   overflow: hidden;
+}
+
+.top-bar.neon{
+  background-color: $ntop-bg;
+}
+
+.top-bar.green{
+  background-color: $gtop-bg;
 }
 
 .topb {
@@ -64,16 +93,48 @@ h1 {
   border: none;
 }
 
+.topb.neon{
+  background-color: $ntop-button;
+}
+
+.topb.green{
+  background-color: $gtop-button;
+}
+
 .topb:hover {
   background-color: $top-button-active;
+}
+
+.topb.neon:hover {
+  background-color: $ntop-button-active;
+}
+
+.topb.green:hover {
+  background-color: $gtop-button-active;
 }
 
 .topba {
   background-color: $top-button-active;
 }
 
+.topba.neon {
+  background-color: $ntop-button-active;
+}
+
+.topba.green {
+  background-color: $gtop-button-active;
+}
+
 .topba:hover {
   background-color: $top-button-ahover;
+}
+
+.topba.neon:hover {
+  background-color: $ntop-button-ahover;
+}
+
+.topba.green:hover {
+  background-color: $gtop-button-ahover;
 }
 
 .borgir {
@@ -124,6 +185,14 @@ h1 {
     z-index: 99;
 }
 
+.mobile-menu.neon{
+  background-color: $ntop-bg;
+}
+
+.mobile-menu.green{
+  background-color: $gtop-bg;
+}
+
 .mobile-menu.active {
   left: 0;
 }
@@ -150,16 +219,122 @@ h1 {
   border: none;
 }
 
+.mobile-menu>ul>li>.menui.neon {
+  background-color: $ntop-button;
+}
+
+.mobile-menu>ul>li>.menui.green {
+  background-color: $gtop-button;
+}
+
 .mobile-menu>ul>li>.menui:hover {
   background-color: $top-button-active;
+}
+
+.mobile-menu>ul>li>.menui.neon:hover {
+  background-color: $ntop-button-active;
+}
+
+.mobile-menu>ul>li>.menui.green:hover {
+  background-color: $gtop-button-active;
 }
 
 .mobile-menu>ul>li>.menui.menuia {
   background-color: $top-button-active;
 }
 
+.mobile-menu>ul>li>.menui.menuia.neon {
+  background-color: $ntop-button-active;
+}
+
+.mobile-menu>ul>li>.menui.menuia.green {
+  background-color: $gtop-button-active;
+}
+
 .mobile-menu>ul>li>.menui.menuia:hover {
   background-color: $top-button-ahover;
+}
+
+.mobile-menu>ul>li>.menui.menuia.neon:hover {
+  background-color: $ntop-button-ahover;
+}
+
+.mobile-menu>ul>li>.menui.menuia.green:hover {
+  background-color: $gtop-button-ahover;
+}
+
+.site-colours{
+  background-color: $top-button-active;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+}
+
+.site-colours.neon{
+  background-color: $ntop-button-active;
+}
+
+.site-colours.green{
+  background-color: $gtop-button-active;
+}
+
+.msite-colours{
+  background-color: $top-button-active;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+}
+
+.cards {
+  margin: 0 auto 0 15px;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.cards * {
+  box-sizing: border-box;
+}
+
+.card{
+  height: 150px;
+  width: 250px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  background: #1b1b1b;
+  padding: 20px;
+  box-shadow: #000000 0 0 10px;
+  border-radius: 10px;
+}
+
+.card:hover{
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+  box-shadow: #000000 0 0 20px;
+}
+
+.msite-colours.neon{
+  background-color: $ntop-button-active;
+}
+
+.msite-colours.green{
+  background-color: $gtop-button-active;
 }
 
 // responsive
@@ -167,10 +342,13 @@ h1 {
   .topb {
     display: none;
   }
+  .site-colours{
+    display: none;
+  }
   // unhide top bar
   .top-bar {
     display: grid;
-    grid-template-columns: 0.1fr 0.1fr 0.1fr;
+    grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr;
   }
   // borgir
   .borgir {

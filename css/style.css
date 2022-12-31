@@ -9,6 +9,14 @@ body {
   margin: 0px;
 }
 
+body.neon {
+  background-color: #3F0071;
+}
+
+body.green {
+  background-color: #557153;
+}
+
 main {
   position: absolute;
   top: 69px;
@@ -31,8 +39,16 @@ h1 {
   left: 0;
   width: 100%;
   display: grid;
-  grid-template-columns: 0.1fr 0.1fr 0.1fr;
+  grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr;
   overflow: hidden;
+}
+
+.top-bar.neon {
+  background-color: #4e0d83;
+}
+
+.top-bar.green {
+  background-color: #475f45;
 }
 
 .topb {
@@ -49,16 +65,48 @@ h1 {
   border: none;
 }
 
+.topb.neon {
+  background-color: #FB2576;
+}
+
+.topb.green {
+  background-color: #7D8F69;
+}
+
 .topb:hover {
   background-color: #6264a3;
+}
+
+.topb.neon:hover {
+  background-color: #332FD0;
+}
+
+.topb.green:hover {
+  background-color: #A9AF7E;
 }
 
 .topba {
   background-color: #6264a3;
 }
 
+.topba.neon {
+  background-color: #332FD0;
+}
+
+.topba.green {
+  background-color: #A9AF7E;
+}
+
 .topba:hover {
   background-color: #56588a;
+}
+
+.topba.neon:hover {
+  background-color: #0002A1;
+}
+
+.topba.green:hover {
+  background-color: #E6E5A3;
 }
 
 .borgir {
@@ -108,6 +156,14 @@ h1 {
   z-index: 99;
 }
 
+.mobile-menu.neon {
+  background-color: #4e0d83;
+}
+
+.mobile-menu.green {
+  background-color: #475f45;
+}
+
 .mobile-menu.active {
   left: 0;
 }
@@ -134,25 +190,134 @@ h1 {
   border: none;
 }
 
+.mobile-menu > ul > li > .menui.neon {
+  background-color: #FB2576;
+}
+
+.mobile-menu > ul > li > .menui.green {
+  background-color: #7D8F69;
+}
+
 .mobile-menu > ul > li > .menui:hover {
   background-color: #6264a3;
+}
+
+.mobile-menu > ul > li > .menui.neon:hover {
+  background-color: #332FD0;
+}
+
+.mobile-menu > ul > li > .menui.green:hover {
+  background-color: #A9AF7E;
 }
 
 .mobile-menu > ul > li > .menui.menuia {
   background-color: #6264a3;
 }
 
+.mobile-menu > ul > li > .menui.menuia.neon {
+  background-color: #332FD0;
+}
+
+.mobile-menu > ul > li > .menui.menuia.green {
+  background-color: #A9AF7E;
+}
+
 .mobile-menu > ul > li > .menui.menuia:hover {
   background-color: #56588a;
+}
+
+.mobile-menu > ul > li > .menui.menuia.neon:hover {
+  background-color: #0002A1;
+}
+
+.mobile-menu > ul > li > .menui.menuia.green:hover {
+  background-color: #E6E5A3;
+}
+
+.site-colours {
+  background-color: #6264a3;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+}
+
+.site-colours.neon {
+  background-color: #332FD0;
+}
+
+.site-colours.green {
+  background-color: #A9AF7E;
+}
+
+.msite-colours {
+  background-color: #6264a3;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+}
+
+.cards {
+  margin: 0 auto 0 15px;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.cards * {
+  box-sizing: border-box;
+}
+
+.card {
+  height: 150px;
+  width: 250px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  background: #1b1b1b;
+  padding: 20px;
+  box-shadow: #000000 0 0 10px;
+  border-radius: 10px;
+}
+
+.card:hover {
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+  box-shadow: #000000 0 0 20px;
+}
+
+.msite-colours.neon {
+  background-color: #332FD0;
+}
+
+.msite-colours.green {
+  background-color: #A9AF7E;
 }
 
 @media screen and (max-width: 659px) {
   .topb {
     display: none;
   }
+  .site-colours {
+    display: none;
+  }
   .top-bar {
     display: grid;
-    grid-template-columns: 0.1fr 0.1fr 0.1fr;
+    grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr;
   }
   .borgir {
     display: block;
