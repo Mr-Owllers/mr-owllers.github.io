@@ -29,7 +29,7 @@ h1 {
 
 .contacts {
   display: grid;
-  grid-template-areas: "gmail id" "youtube channel" "discord server" "github user" "insta tag";
+  grid-template-areas: "gmail id" "youtube channel" "discord server" "github user" "insta tag" "twitter at";
 }
 
 .top-bar {
