@@ -128,27 +128,40 @@ function colourChange() {
       });
 }
 
-if(localStorage.getItem("cookie") != 'true') {
-    document.getElementById("cookie-banner").style.display = 'flex';
-} else {
+if(localStorage.getItem("cookie") == 'true') {
     document.getElementById("cookie-banner").style.display = 'none';
+    // make buttons clickable
+    var clickable = document.querySelectorAll<HTMLElement>("button:not(.cookie-btn)");
+    for (var i = 0; i < clickable.length; i++) {
+        clickable[i].style.pointerEvents = 'auto';
+    }
+} else {
+    document.getElementById("cookie-banner").style.display = 'flex';
+    // make buttons unclickable
+    var not_banner = document.querySelectorAll<HTMLElement>("button:not(.cookie-btn)");
+    for (var i = 0; i < not_banner.length; i++) {
+        not_banner[i].style.pointerEvents = 'none';
+    }
 }
 
 function acceptCookie(){
     var banner = document.getElementById("cookie-banner")
-    banner.innerHTML = "<img src='static/cat-happy.png' alt='happy cat'></img><p>meu- yay!</p>"
+    banner.innerHTML = "<img src='static/sys-granted.png' alt='access granted' id='sys'></img><p>Access granted!</p>"
     localStorage.setItem("cookie", 'true');
-    //wait 2 seconds and then hide the banner
     setTimeout(hideCookie, 2000);
 }
 
 function hideCookie(){
     document.getElementById("cookie-banner").style.display = 'none';
+    var clickable = document.querySelectorAll<HTMLElement>("button:not(.cookie-btn)");
+    for (var i = 0; i < clickable.length; i++) {
+        clickable[i].style.pointerEvents = 'auto';
+    }
 }
 
 function denyCookie(){
     var banner = document.getElementById("cookie-banner")
-    banner.innerHTML = "<img src='static/cat-sad.png' alt='sad cat'></img><p>meu- :(<br>system- u have made meu sad. accept the cookies to make her happy</p><button class='cookie-btn' onclick='acceptCookie()'>oki oki i take</button>"
+    banner.innerHTML = "<img src='static/sys-angry.png' alt='angry system' id='sys'></img><p>Bruh... I just said it's needed for proper functioning!!</p><button class='cookie-btn' onclick='acceptCookie()'>Fine... Accept</button>"
     localStorage.setItem("cookie", 'false');
 }
 
