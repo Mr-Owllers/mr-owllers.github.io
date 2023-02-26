@@ -342,7 +342,7 @@ h1 {
   transform: translate(-50%, -50%);
   border-radius: 10px;
   box-shadow: #000000 0 0 10px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -369,6 +369,30 @@ h1 {
   color: #5a6470;
 }
 
+#cookie-deny {
+  opacity: 0.01;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#cookie-deny:hover {
+  opacity: 1;
+  background-color: #353333;
+  color: #5a6470;
+}
+
+@media screen and (max-width: 659px) {
+  #cookie-banner {
+    width: 85%;
+    height: 85%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .cookie-btn {
+    font-size: 16px;
+    margin: 5px;
+  }
+}
 @keyframes wave {
   from, to {
     transform: translate(-50%, 0%);

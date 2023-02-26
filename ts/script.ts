@@ -161,7 +161,7 @@ function hideCookie(){
 
 function denyCookie(){
     var banner = document.getElementById("cookie-banner")
-    banner.innerHTML = "<img src='static/sys-angry.png' alt='angry system' id='sys'></img><p>Bruh... I just said it's needed for proper functioning!!</p><button class='cookie-btn' onclick='acceptCookie()'>Fine... Accept</button>"
+    banner.innerHTML = "<img src='static/sys-confused.png' alt='angry system' id='sys'></img><p>Wait how did you find...? Well you still have to except it.</p><button class='cookie-btn' onclick='acceptCookie()'>Fine... Accept</button>"
     localStorage.setItem("cookie", 'false');
 }
 
