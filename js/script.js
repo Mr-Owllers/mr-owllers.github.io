@@ -155,7 +155,7 @@ function hideCookie() {
 }
 function denyCookie() {
     var banner = document.getElementById("cookie-banner");
-    banner.innerHTML = "<img src='static/sys-confused.png' alt='angry system' id='sys'></img><p>Wait how did you find...? Well you still have to except it.</p><button class='cookie-btn' onclick='acceptCookie()'>Fine... Accept</button>";
+    banner.innerHTML = "<img src='static/sys-confused.png' alt='angry system' id='sys'></img><p>Wait how did you find...? Well you still have to accept it.</p><button class='cookie-btn' onclick='acceptCookie()'>Fine... Accept</button>";
     localStorage.setItem("cookie", 'false');
 }
 function setThemeCookie(theme) {
