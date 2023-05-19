@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "target": "esnext",
-        "watch": true,
         "lib": ["esnext", "dom"],
         "outDir": "../js"
     }
