@@ -20,7 +20,7 @@
         <button class="topb default" onclick = "redirect('/')">home</button>
         <button class="topb default" onclick = "redirect('projects')">projects</button>
         <button class="topb default topba">contacts</button>
-        <button class="site-colours default" onclick="colourChange()"></button>
+        <button class="site-colours default" onclick="cycleTheme()"></button>
     </div>
     <button class="borgir">
         <div class="bar"></div>
@@ -30,19 +30,19 @@
             <li><button class="menui default" onclick = "redirect('/')">home</button></li>
             <li><button class="menui default" onclick = "redirect('projects')">projects</button></li>
             <li><button class="menui default menuia">contacts</button></li>
-            <li><button class="msite-colours default" onclick="colourChange()"></button></li>
+            <li><button class="msite-colours default" onclick="cycleTheme()"></button></li>
         </ul>
     </div>
     <main>
         <h1>📞 my contacts</h1>
         <div class="contacts">
-            <div id="gmail">
+            <div id="gmail" class="item">
                 <svg
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="30"
+                height="30"
                 >
                     <title>Gmail</title>
                     <path
@@ -51,14 +51,14 @@
                     />
                 </svg>
             </div>
-            <div id="account"><a href="mailto:mr.owllers@gmail.com">mr.owllers@gmail.com</a></div>
-            <div id="youtube">
+            <div id="account" class="item"><a href="mailto:mr.owllers@gmail.com">mr.owllers@gmail.com</a></div>
+            <div id="youtube" class="item">
                 <svg
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="30"
+                height="30"
                 >
                     <title>YouTube</title>
                     <path
@@ -67,14 +67,14 @@
                     />
                 </svg>
             </div>
-            <div id="channel"><a href="https://youtube.com/channel/UCxwmzTRETfLimI012CJoGnA">OwllyCodes</a></div>
-            <div id="discord">
+            <div id="channel" class="item"><a href="https://youtube.com/channel/UCxwmzTRETfLimI012CJoGnA">OwllyCodes</a></div>
+            <div id="discord" class="item">
                 <svg
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="30"
+                height="30"
                 >
                     <title>Discord</title>
                     <path
@@ -83,14 +83,14 @@
                     />
                 </svg>
             </div>
-            <div id="server"><a href="https://dsc.gg/owlly">Server</a> || @.owlly</div>
-            <div id="github">
+            <div id="server" class="item"><a href="https://dsc.gg/owlly">Server</a> (@.owlly)</div>
+            <div id="github" class="item">
                 <svg
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="30"
+                height="30"
                 >
                     <title>GitHub</title>
                     <path
@@ -99,14 +99,14 @@
                     />
                 </svg>
             </div>
-            <div id="user"><a href="https://github.com/Mr-Owllers">Mr-Owllers</a></div>
-            <div id="instagram">
+            <div id="user" class="item"><a href="https://github.com/Mr-Owllers">Mr-Owllers</a></div>
+            <div id="instagram" class="item">
                 <svg
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="30"
+                height="30"
                 >
                     <title>Instagram</title>
                     <path
@@ -115,14 +115,14 @@
                     />
                 </svg>
             </div>
-            <div id="tag"><a href="https://www.instagram.com/owlly.c">owlly.c</a></div>
-            <div id="twitter">
+            <div id="tag" class="item"><a href="https://www.instagram.com/owlly.c">owlly.c</a></div>
+            <div id="twitter" class="item">
                 <svg
                     role="img"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="30"
+                    height="30"
                     >
                         <title>Twitter</title>
                         <path
@@ -131,14 +131,14 @@
                         />
                 </svg>
             </div>
-            <div id="at"><a href="https://twitter.com/Owlly_dumm">@Owlly_dumm (👎)</a></div>
-            <div id="tumblr">
+            <div id="at" class="item"><a href="https://twitter.com/Owlly_dumm">@Owlly_dumm (👎)</a></div>
+            <div id="tumblr" class="item">
                 <svg
                     role="img"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="30"
+                    height="30"
                     >
                         <title>Tumblr</title>
                         <path
@@ -147,12 +147,16 @@
                         />
                 </svg>
             </div>
-            <div id="blog"><a href="https://owllyistdumm.tumblr.com">@owllyistdumm (👍)</a></div>
+            <div id="blog" class="item"><a href="https://owllyistdumm.tumblr.com">@owllyistdumm (👍)</a></div>
         </div>
     </main>
     <footer>
-        <div id="bubble-wrapper">
-            <div class="bubble"></div>
+        <div class="foot">
+            <p>© 2021-2024 Owlly | made with <span class="qhover" title="AAAAAAAAA">PAIN</span> and 🍵 |</p>
+            <p class="patreon">
+                <img src="static/heartfireworkGIF.gif" alt="heart gif" class="heart-gif" />
+                <a href="https://www.patreon.com/Owlly9" target="_blank" rel="noopener noreferrer">Patreon</a>
+            </p>
         </div>
     </footer>
     <!-- cookie banner -->

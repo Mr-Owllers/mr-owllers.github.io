@@ -20,7 +20,7 @@
         <button class="topb default" onclick = "redirect('/')">home</button>
         <button class="topb default topba">projects</button>
         <button class="topb default" onclick = "redirect('contacts')">contacts</button>
-        <button class="site-colours default" onclick="colourChange()"></button>
+        <button class="site-colours default" onclick="cycleTheme()"></button>
     </div>
     <button class="borgir">
         <div class="bar"></div>
@@ -30,35 +30,30 @@
             <li><button class="menui default" onclick = "redirect('/')">home</button></li>
             <li><button class="menui default menuia">projects</button></li>
             <li><button class="menui default" onclick = "redirect('contacts')">contacts</button></li>
-            <li><button class="msite-colours default" onclick="colourChange()"></button></li>
+            <li><button class="msite-colours default" onclick="cycleTheme()"></button></li>
         </ul>
     </div>
     <main>
         <h1>🚀 some of my own projects</h1>
         <div class="cards">
             <div class="card" onclick="redirect('https:/\/github.com/mr-owllers/treefacts')">
-                <h3>TreeFacts</h3>
+                <h2>TreeFacts</h2>
                 <p>An cli that tells facts about trees</p>
             </div>
             <div class="card" onclick="redirect('https:/\/github.com/mr-owllers/owll-is-alive')">
-                <h3>Owll</h3>
+                <h2>Owll</h2>
                 <p>My very own discord bot</p>
             </div>
             <div class="card" onclick="redirect('https:/\/github.com/mr-owllers/To-Idua')">
-                <h3>To-Idua</h3>
+                <h2>To-Idua</h2>
                 <p>a TODO list like Idea-manager™️ (lol) for the command line.</p>
             </div>
             <div class="card" onclick="redirect('https:/\/github.com/mr-owllers/green-tea')">
-                <h3>green-tea</h3>
+                <h2>green-tea</h2>
                 <p>a simple cli that keeps your screen awake</p>
             </div>
         </div>
     </main>
-    <footer>
-        <div id="bubble-wrapper">
-            <div class="bubble"></div>
-        </div>
-    </footer>
     <!-- cookie banner -->
     <div id="cookie-banner">
         <img src="static/sys-nuetral.png" alt="system" id="sys">

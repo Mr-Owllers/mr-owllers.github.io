@@ -20,7 +20,7 @@
         <button class="topb default topba">home</button>
         <button class="topb default" onclick = "redirect('projects')">projects</button>
         <button class="topb default" onclick = "redirect('contacts')">contacts</button>
-        <button class="site-colours default" onclick="colourChange()"></button>
+        <button class="site-colours default" onclick="cycleTheme()"></button>
     </div>
     <button class="borgir">
         <div class="bar"></div>
@@ -30,29 +30,35 @@
             <li><button class="menui default menuia">home</button></li>
             <li><button class="menui default" onclick = "redirect('projects')">projects</button></li>
             <li><button class="menui default" onclick = "redirect('contacts')">contacts</button></li>
-            <li><button class="msite-colours default" onclick="colourChange()"></button></li>
+            <li><button class="msite-colours default" onclick="cycleTheme()"></button></li>
         </ul>
     </div>
     <main>
         <h1>👋 Hi there! I'm Owlly!</h1>
-        <p>I am a young developer who is trying to learn as much as possible. I am currently know</p>
-        <ul>
-            <li>HTML & CSS</li>
-            <li>Python</li>
-            <li>C</li>
-            <li>C++ (abit)</li>
-            <li>Rust</li>
-            <li>TypeScript/JavaScript</li>
-        </ul>
-        <p>And i am currently learning (on 27/2/2023)</p>
-        <ul>
-            <li>Nothin</li>
-        </ul>
-        <p>Click on Projects to see my projects or click on Contacts if you want to contact me.<br>(updated on 2023, 27th of Feb)</p>
+        <div class="section">
+            <p>I am a young developer who is trying to learn as much as possible. I am currently know:</p>
+            <ul>
+                <li>HTML & <span class="qhover" title="mainly SCSS">CSS</span></li>
+                <li>Python</li>
+                <li>C</li>
+                <li><span class="qhover" title="only abit...">C++</span></li>
+                <li>Rust</li>
+                <li>TypeScript/JavaScript</li>
+            </ul>
+            <p>And i am currently learning (on 27/2/2023)</p>
+            <ul>
+                <li>Nothin</li>
+            </ul>
+            <p>Click on Projects to see my projects or click on Contacts if you want to contact me.<br>(updated on 2023, 28th of Dec)</p>
+        </div>
     </main>
     <footer>
-        <div id="bubble-wrapper">
-            <div class="bubble"></div>
+        <div class="foot">
+            <p>© 2021-2024 Owlly | made with <span class="qhover" title="AAAAAAAAA">PAIN</span> and 🍵 |</p>
+            <p class="patreon">
+                <img src="static/heartfireworkGIF.gif" alt="heart gif" class="heart-gif"/>
+                <a  href="https://www.patreon.com/Owlly9" target="_blank" rel="noopener noreferrer">Patreon</a>
+            </p>
         </div>
     </footer>
     <!-- cookie banner -->

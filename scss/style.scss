@@ -1,49 +1,98 @@
 // vars
-$bg-color: #22272e;
+$bg-color: #11141a;
 $top-bg: #202029;
 $top-button: #333333;
 $top-button-active: #6264a3;
-$top-button-ahover: #56588a;
+$top-button-ahover: #7376b8;
+$card-bg: #0d0d14;
 $text-colour: #ffffff;
 // neon
 $nbg-color: #3F0071;
 $ntop-bg: #4e0d83;
 $ntop-button: #FB2576;
-$ntop-button-active: #332FD0;
-$ntop-button-ahover: #0002A1;
+$ntop-button-active: #1b35ca;
+$ntop-button-ahover: #3b6fe0;
+$ncard-bg: #1d0035;
 // green
 $gbg-color: #557153;
 $gtop-bg: #475f45;
 $gtop-button: #7D8F69;
 $gtop-button-active: #A9AF7E;
 $gtop-button-ahover: #E6E5A3;
+$gcard-bg: #2b4229;
 
-$main-margin: 4px;
+$main-margin: 30px;
 
 // css
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+
 * {
-  font-family: monospace;
+  font-family: "DM mono", monospace;
   color: $text-colour;
 }
 
 body {
     background-color: $bg-color;
-    font-size: 15px;
+    font-size: 20px;
     margin: 0px;
+    transition: background-color 0.3s ease-in-out;
+
+  &.neon{
+    background-color: $nbg-color;
+  }
+
+  &.green{
+    background-color: $gbg-color;
+  }
 }
 
-body.neon{
-  background-color: $nbg-color;
-}
-
-body.green{
-  background-color: $gbg-color;
+.qhover{
+  cursor: help;
+  text-decoration: underline dotted;
 }
 
 main {
   position: absolute;
   top: 69px;
-  margin: $main-margin;
+  margin: 0 $main-margin 0 $main-margin;
+
+  .section{
+    margin: 0 65px 0 65px;
+  }
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: 20px;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+
+  .foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+
+    .patreon{
+      display: flex;
+      align-items: center;
+
+      .heart-gif{
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
 }
 
 h1 {
@@ -60,6 +109,14 @@ h1 {
   "insta tag"
   "twitter at"
   "tumblr blog";
+  padding-left: 55px;
+
+  .item{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
 }
 
 .top-bar {
@@ -68,75 +125,112 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  display: grid;
-  grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr;
+  display: flex;
   overflow: hidden;
-}
+  transition: all 0.3s ease-in-out;
 
-.top-bar.neon{
-  background-color: $ntop-bg;
-}
+  &.neon{
+    background-color: $ntop-bg;
+  }
 
-.top-bar.green{
-  background-color: $gtop-bg;
-}
+  &.green{
+    background-color: $gtop-bg;
+  }
 
-.topb {
-  background-color: $top-button;
-  border-radius: 10px;
-  color: $text-colour;
-  cursor: pointer;
-  font-size: 20px;
-  width: 202px;
-  height: 59px;
-  margin: 10px;
-  padding: 5px;
-  text-align: center;
-  border: none;
-}
+  .topb {
+    background-color: $top-button;
+    border-radius: 20px;
+    color: $text-colour;
+    cursor: pointer;
+    font-size: 20px;
+    width: 150px;
+    height: 60px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border: none;
+    transition: all 0.3s ease-in-out;
 
-.topb.neon{
-  background-color: $ntop-button;
-}
 
-.topb.green{
-  background-color: $gtop-button;
-}
+    &.neon{
+      background-color: $ntop-button;
 
-.topb:hover {
-  background-color: $top-button-active;
-}
+      &:hover {
+        background-color: $ntop-button-active;
+      }
+    }
 
-.topb.neon:hover {
-  background-color: $ntop-button-active;
-}
+    &.green{
+      background-color: $gtop-button;
 
-.topb.green:hover {
-  background-color: $gtop-button-active;
-}
+      &:hover {
+        background-color: $gtop-button-active;
+      }
+    }
 
-.topba {
-  background-color: $top-button-active;
-}
+    &:hover {
+      background-color: $top-button-active;
+    }
+  }
 
-.topba.neon {
-  background-color: $ntop-button-active;
-}
+  .topba {
+    background-color: $top-button-active;
+    transition: background-color 0.3s ease-in-out;
 
-.topba.green {
-  background-color: $gtop-button-active;
-}
+    &.neon {
+      background-color: $ntop-button-active;
 
-.topba:hover {
-  background-color: $top-button-ahover;
-}
+      &:hover {
+        background-color: $ntop-button-ahover;
+      }
+    }
 
-.topba.neon:hover {
-  background-color: $ntop-button-ahover;
-}
+    &.green {
+      background-color: $gtop-button-active;
 
-.topba.green:hover {
-  background-color: $gtop-button-ahover;
+      &:hover {
+        background-color: $gtop-button-ahover;
+      }
+    }
+
+    &:hover {
+      background-color: $top-button-ahover;
+    }
+  }
+
+  .site-colours {
+    background-color: $top-button-active;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border: none;
+    float: right;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $top-button-ahover;
+    }
+
+    &.neon {
+      background-color: $ntop-button-active;
+
+      &:hover {
+        background-color: $ntop-button-ahover;
+      }
+    }
+
+    &.green {
+      background-color: $gtop-button-active;
+
+      &:hover {
+        background-color: $gtop-button-ahover;
+      }
+    }
+  }
 }
 
 .borgir {
@@ -150,193 +244,191 @@ h1 {
   outline: none;
   border: none;
   z-index: 100;
-}
 
-.borgir .bar, .borgir:before, .borgir:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 5px;
-  background-color: $text-colour;
-  margin: 5px 0;
-  transition: 0.4s;
-}
+  .bar, &:before, &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: $text-colour;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
 
-.borgir.active:before {
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
+  &.active:before {
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
 
-.borgir.active .bar {
-  opacity: 0;
-}
+  &.active .bar {
+    opacity: 0;
+  }
 
-.borgir.active:after {
-  transform: rotate(45deg) translate(-8px, -4.5px);
+  &.active:after {
+    transform: rotate(45deg) translate(-8px, -4.5px);
+  }
 }
 
 .mobile-menu {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200px;
-    height: 100%;
-    background-color: $top-bg;
-    transition: 0.4s;
-    overflow: hidden;
-    z-index: 99;
-}
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200px;
+  height: 100%;
+  background-color: $top-bg;
+  overflow: hidden;
+  z-index: 99;
+  transition: all 0.3s ease-in-out;
 
-.mobile-menu.neon{
-  background-color: $ntop-bg;
-}
+  &.neon{
+    background-color: $ntop-bg;
+  }
 
-.mobile-menu.green{
-  background-color: $gtop-bg;
-}
+  &.green{
+    background-color: $gtop-bg;
+  }
 
-.mobile-menu.active {
-  left: 0;
-}
+  &.active {
+    left: 0;
+  }
 
-.mobile-menu ul {
-  list-style-type: none;
-  position: relative;
-  top: 50px;
-  padding: 0;
-  margin: 5px;
-}
+  ul {
+    list-style-type: none;
+    position: relative;
+    top: 50px;
+    padding: 0;
+    margin: 5px;
 
-.mobile-menu>ul>li>.menui {
-  background-color: $top-button;
-  border-radius: 10px;
-  color: $text-colour;
-  cursor: pointer;
-  font-size: 20px;
-  width: 60%;
-  height: 10%px;
-  margin: 10px;
-  padding: 5px;
-  text-align: center;
-  border: none;
-}
+    li{
+      .menui {
+        background-color: $top-button;
+        border-radius: 10px;
+        color: $text-colour;
+        cursor: pointer;
+        font-size: 20px;
+        width: 60%;
+        height: 10%px;
+        margin: 10px;
+        padding: 5px;
+        text-align: center;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
 
-.mobile-menu>ul>li>.menui.neon {
-  background-color: $ntop-button;
-}
 
-.mobile-menu>ul>li>.menui.green {
-  background-color: $gtop-button;
-}
+        &.neon {
+          background-color: $ntop-button;
 
-.mobile-menu>ul>li>.menui:hover {
-  background-color: $top-button-active;
-}
+          &:hover {
+            background-color: $ntop-button-active;
+          }
+        }
 
-.mobile-menu>ul>li>.menui.neon:hover {
-  background-color: $ntop-button-active;
-}
+        &.green {
+          background-color: $gtop-button;
 
-.mobile-menu>ul>li>.menui.green:hover {
-  background-color: $gtop-button-active;
-}
+          &:hover {
+            background-color: $gtop-button-active;
+          }
+        }
 
-.mobile-menu>ul>li>.menui.menuia {
-  background-color: $top-button-active;
-}
+        &:hover {
+          background-color: $top-button-active;
+        }
+      }
 
-.mobile-menu>ul>li>.menui.menuia.neon {
-  background-color: $ntop-button-active;
-}
+      .menuia {
+        background-color: $top-button-active;
+        transition: background-color 0.3s ease-in-out;
 
-.mobile-menu>ul>li>.menui.menuia.green {
-  background-color: $gtop-button-active;
-}
+        &.neon {
+          background-color: $ntop-button-active;
 
-.mobile-menu>ul>li>.menui.menuia:hover {
-  background-color: $top-button-ahover;
-}
+          &:hover {
+            background-color: $ntop-button-ahover;
+          }
+        }
 
-.mobile-menu>ul>li>.menui.menuia.neon:hover {
-  background-color: $ntop-button-ahover;
-}
+        &.green {
+          background-color: $gtop-button-active;
 
-.mobile-menu>ul>li>.menui.menuia.green:hover {
-  background-color: $gtop-button-ahover;
-}
+          &:hover {
+            background-color: $gtop-button-ahover;
+          }
+        }
 
-.site-colours{
-  background-color: $top-button-active;
-  border-radius: 100%;
-  cursor: pointer;
-  font-size: 20px;
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  padding: 5px;
-  text-align: center;
-  border: none;
-}
+        &:hover {
+          background-color: $top-button-ahover;
+        }
+      }
+    }
+  }
 
-.site-colours.neon{
-  background-color: $ntop-button-active;
-}
+  .msite-colours{
+    background-color: $top-button-active;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
 
-.site-colours.green{
-  background-color: $gtop-button-active;
-}
+    &.neon{
+      background-color: $ntop-button-active;
+    }
 
-.msite-colours{
-  background-color: $top-button-active;
-  border-radius: 100%;
-  cursor: pointer;
-  font-size: 20px;
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  padding: 5px;
-  text-align: center;
-  border: none;
+    &.green{
+      background-color: $gtop-button-active;
+    }
+  }
 }
 
 .cards {
-  margin: 0 auto 0 15px;
-  max-width: 1000px;
+  margin: 0 15px 0 15px;
+  max-width: 2000px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
   grid-auto-rows: auto;
-  gap: 20px;
-  padding-top: 30px;
-}
 
-.cards * {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-.card{
-  height: 150px;
-  width: 250px;
-  text-align: center;
-  transition: all 0.2s ease-in-out;
-  background: #1b1b1b;
-  padding: 20px;
-  box-shadow: #000000 0 0 10px;
-  border-radius: 10px;
-}
+  .card{
+    height: 200px;
+    width: 380px;
+    text-align: center;
+    background: $card-bg;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    border-bottom: 10px solid $top-button-ahover;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.card:hover{
-  cursor: pointer;
-  position: relative;
-  top: -10px;
-  box-shadow: #000000 0 0 20px;
-}
+    
+    &:hover{
+      cursor: pointer;
+      position: relative;
+      top: -5px;
+      box-shadow: 0 10px 5px 0 #000000f1;
+    }
 
-.msite-colours.neon{
-  background-color: $ntop-button-active;
-}
+    &.neon{
+      background: $ncard-bg;
+      border-bottom: 10px solid $ntop-button-ahover;
+    }
 
-.msite-colours.green{
-  background-color: $gtop-button-active;
+    &.green{
+      background: $gcard-bg;
+      border-bottom: 10px solid $gtop-button-ahover;
+    }
+  }
 }
 
 // responsive
@@ -362,7 +454,12 @@ h1 {
     margin: $main-margin;
   }
   .cards{
-    grid-template-columns: repeat(auto-fit, minmax(200px, 659px));
+    grid-template-columns: repeat(auto-fit, 100%);
+
+    .card{
+      width: 100%;
+    }
+
   }
 }
 
@@ -380,40 +477,39 @@ h1 {
   display: none;
   justify-content: center;
   align-items: center;
-}
 
-#sys{
-  width: 128px;
-  height: 128px;
-}
+  #sys {
+    width: 128px;
+    height: 128px;
+  }
 
-.cookie-btn{
-  background-color: #5a6470;
-  border: none;
-  color: #ffffff;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  transition: all 0.2s ease-in-out;
-}
+  .cookie-btn {
+    background-color: #5a6470;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 
-.cookie-btn:hover{
-  background-color: #353333;
-  color: #5a6470;
-}
+    &:hover {
+      background-color: #353333;
+      color: #5a6470;
+    }
+  }
 
-#cookie-deny{
-  opacity: 0.01;
-  background-color: #ffffff;
-  color: #000000;
-}
+  #cookie-deny {
+    opacity: 0.01;
+    background-color: #ffffff;
+    color: #000000;
 
-#cookie-deny:hover{
-  opacity: 1;
-  background-color: #353333;
-  color: #5a6470;
+    &:hover {
+      opacity: 1;
+      background-color: #353333;
+      color: #5a6470;
+    }
+  }
 }
 
 //make the cookie banner responsive
@@ -427,51 +523,5 @@ h1 {
   .cookie-btn{
     font-size: 16px;
     margin: 5px;
-  }
-}
-
-// bubble
-
-@keyframes wave {
-  from, to {
-    transform: translate(-50%, 0%);
-  }
-  
-  50% {
-    transform: translate(-50%, -20%);
-  }
-}
-
-#bubble-wrapper {
-  height: 100%;
-  width: 100%;
-  
-  position: fixed;
-  bottom: 0px;
-  
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.bubble {
-  height: max(300px, 30vw);
-  width: max(300px, 30vw);
-  
-  background-color: #2196f3;  
-  border-radius: 100%;
-  
-  position: absolute;
-  left: 50%;
-  top: 100%;
-
-  opacity: 0;
-  
-  animation: wave 2s ease-in-out infinite;
-}
-
-@media(prefers-reduced-motion) {
-  .bubble {
-    animation: none;
-    display: none;
   }
 }
