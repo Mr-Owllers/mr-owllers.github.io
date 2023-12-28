@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Projects" property="og:title" />
     <meta content="some of owlly's projects" property="og:description" />
-    <meta content="https://owllycodes.com/project.html" property="og:url" />
+    <meta content="https://owllycodes.com/project" property="og:url" />
     <meta content="https://owllycodes.com/static/favicon_io/android-chrome-192x192.png" property="og:image" />
     <meta content="#3352a7" data-react-helmet="true" name="theme-color" />
     <title>Owlly's Site</title>
@@ -19,6 +19,7 @@
     <div class="top-bar default">
         <button class="topb default" onclick = "redirect('/')">home</button>
         <button class="topb default topba">projects</button>
+        <button class="topb default" onclick = "redirect('blogs')">blogs</button>
         <button class="topb default" onclick = "redirect('contacts')">contacts</button>
         <button class="site-colours default" onclick="cycleTheme()"></button>
     </div>
@@ -29,6 +30,7 @@
         <ul>
             <li><button class="menui default" onclick = "redirect('/')">home</button></li>
             <li><button class="menui default menuia">projects</button></li>
+            <li><button class="menui default" onclick = "redirect('blogs')">blogs</button></li>
             <li><button class="menui default" onclick = "redirect('contacts')">contacts</button></li>
             <li><button class="msite-colours default" onclick="cycleTheme()"></button></li>
         </ul>
@@ -54,6 +56,15 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="foot">
+            <p>© 2021-2024 Owlly | made with <span class="qhover" title="AAAAAAAAA">PAIN</span> and 🍵 |</p>
+            <div class="patreon">
+                <img src="static/heartfireworkGIF.gif" alt="heart gif" class="heart-gif" />
+                <a href="https://www.patreon.com/Owlly9" target="_blank" rel="noopener noreferrer">Patreon</a>
+            </div>
+        </div>
+    </footer>
     <!-- cookie banner -->
     <div id="cookie-banner">
         <img src="static/sys-nuetral.png" alt="system" id="sys">
