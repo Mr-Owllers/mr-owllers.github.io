@@ -68,6 +68,7 @@ h1 {
   display: grid;
   grid-template-areas: "gmail id" "youtube channel" "discord server" "github user" "insta tag" "twitter at" "tumblr blog";
   padding-left: 55px;
+  width: max-content;
 }
 .contacts .item {
   padding: 10px;
