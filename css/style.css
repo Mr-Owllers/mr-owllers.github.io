@@ -52,6 +52,7 @@ footer .foot {
   text-align: center;
   font-size: 15px;
   width: max-content;
+  align-items: center;
 }
 @media screen and (max-width: 659px) {
   footer .foot {
@@ -72,11 +73,11 @@ footer .foot {
   footer .foot {
     flex-direction: column;
     align-items: center;
-    margin-bottom: -100px;
+    margin-bottom: -150px;
     gap: 5px;
   }
 }
-@media screen and (max-width: 659px) and (max-height: 667px) {
+@media screen and (max-width: 659px) and (max-height: 686px) {
   footer .foot {
     flex-direction: column;
     align-items: center;
