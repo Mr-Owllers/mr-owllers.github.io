@@ -94,21 +94,18 @@ footer{
           flex-direction: column;
           align-items: center;
           margin-bottom: -75px;
-          gap: 5px;
         }
 
         @media screen and (max-height: 760px) {
           flex-direction: column;
           align-items: center;
           margin-bottom: -150px;
-          gap: 5px;
         }
 
         @media screen and (max-height: 686px) {
           flex-direction: column;
           align-items: center;
           margin-bottom: -275px;
-          gap: 5px;
         }
       }
 
@@ -124,7 +121,6 @@ footer{
             flex-direction: column;
             align-items: center;
             margin-bottom: -250px;
-            gap: 5px;
           }
 
           @media screen and (max-height: 854px) {
@@ -133,7 +129,6 @@ footer{
             flex-direction: column;
             align-items: center;
             margin-bottom: -400px;
-            gap: 5px;
           }
 
           @media screen and (max-height: 667px) {
@@ -142,7 +137,6 @@ footer{
             flex-direction: column;
             align-items: center;
             margin-bottom: -500px;
-            gap: 5px;
           }
         }
       }
