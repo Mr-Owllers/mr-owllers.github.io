@@ -62,7 +62,7 @@ main {
   margin: 0 $main-margin 0 $main-margin;
 
   .section{
-    margin: 0 35px 0 35px;
+    margin: 0 10px;
   }
 }
 
@@ -83,16 +83,66 @@ footer{
       text-align: center;
       font-size: 15px;
       width: max-content;
-      @media screen and (max-width: 659px) {
-        flex-wrap: wrap;
-        font-size: 12px;
-        justify-content: center;
 
-        @media screen and (max-height: 812px) {
-          flex-direction: column;
-          align-items: center;
-          margin-bottom: -75px;
-          gap: 5px;
+      @media screen and (max-width: 659px) {
+          flex-wrap: wrap;
+          font-size: 12px;
+          justify-content: center;
+      
+          @media screen and (max-height: 883px) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -75px;
+            gap: 5px;
+          }
+
+          @media screen and (max-height: 760px) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -100px;
+            gap: 5px;
+          }
+
+          @media screen and (max-height: 667px) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -275px;
+            gap: 5px;
+          }
+        }
+
+      &.project-footer{
+        @media screen and (max-width: 659px) {
+          flex-wrap: wrap;
+          font-size: 12px;
+          justify-content: center;
+
+          @media screen and (max-height: 926px) {
+            position: absolute;
+            bottom: 0;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -250px;
+            gap: 5px;
+          }
+
+          @media screen and (max-height: 854px) {
+            position: absolute;
+            bottom: 0;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -400px;
+            gap: 5px;
+          }
+
+          @media screen and (max-height: 667px) {
+            position: absolute;
+            bottom: 0;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -500px;
+            gap: 5px;
+          }
         }
       }
 
@@ -110,6 +160,7 @@ footer{
 
 h1 {
   font-size: 35px;
+  word-wrap: break-word;
 }
 
 .contacts {
@@ -122,7 +173,6 @@ h1 {
   "insta tag"
   "twitter at"
   "tumblr blog";
-  padding-left: 55px;
   width: max-content;
 
   .item{
@@ -469,12 +519,14 @@ h1 {
     margin: $main-margin;
   }
   .cards{
-    grid-template-columns: repeat(auto-fit, 100%);
+    // change to flexbox
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .card{
-      width: 100%;
+      width: 90%;
     }
-
   }
 }
 
