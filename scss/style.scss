@@ -21,7 +21,7 @@ $gtop-button-active: #A9AF7E;
 $gtop-button-ahover: #E6E5A3;
 $gcard-bg: #2b4229;
 
-$main-margin: 30px;
+$main-margin: 5px;
 
 // css
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
@@ -42,6 +42,7 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    justify-content: space-between;
 
   &.neon{
     background-color: $nbg-color;
@@ -61,7 +62,7 @@ main {
   margin: 0 $main-margin 0 $main-margin;
 
   .section{
-    margin: 0 65px 0 65px;
+    margin: 0 35px 0 35px;
   }
 }
 
@@ -72,6 +73,7 @@ footer{
   justify-content: center;
   align-items: center;
 
+
   .foot {
       display: flex;
       flex-direction: row;
@@ -80,6 +82,18 @@ footer{
       padding: 10px;
       text-align: center;
       font-size: 15px;
+      width: max-content;
+      @media screen and (max-width: 659px) {
+        flex-wrap: wrap;
+        font-size: 12px;
+        justify-content: center;
+      }
+      @media screen and (max-height: 812px) {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -75px;
+        gap: 5px;
+      }
   
       .patreon {
         display: flex;
@@ -230,11 +244,12 @@ h1 {
 }
 
 .borgir {
-  position: relative;
-  width: 35px;
+  position: fixed;
+  width: 40px;
   cursor: pointer;
   display: none;
-
+  right: 0;
+  margin: 10px;
   appearance: none;
   background: none;
   outline: none;
@@ -265,10 +280,12 @@ h1 {
 }
 
 .mobile-menu {
-  display: block;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
   top: 0;
-  left: -100%;
+  right: -100%;
   width: 200px;
   height: 100%;
   background-color: $top-bg;
@@ -285,27 +302,28 @@ h1 {
   }
 
   &.active {
-    left: 0;
+    right: 0;
   }
 
   ul {
+    margin-top: 100px;
     list-style-type: none;
-    position: relative;
-    top: 50px;
+    width: 100%;
     padding: 0;
-    margin: 5px;
 
     li{
+      margin: 0 10px;
+
       .menui {
         background-color: $top-button;
-        border-radius: 10px;
+        border-radius: 30px;
         color: $text-colour;
         cursor: pointer;
         font-size: 20px;
-        width: 60%;
-        height: 10%px;
-        margin: 10px;
-        padding: 5px;
+        width: 100%;
+        height: 10%;
+        margin: 5px 0;
+        padding: 10px;
         text-align: center;
         border: none;
         transition: background-color 0.3s ease-in-out;
@@ -365,7 +383,7 @@ h1 {
     cursor: pointer;
     width: 50px;
     height: 50px;
-    margin: 10px;
+    margin: 5px 0;
     padding: 5px;
     text-align: center;
     border: none;

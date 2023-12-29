@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  justify-content: space-between;
 }
 body.neon {
   background-color: #3F0071;
@@ -29,10 +30,10 @@ body.green {
 }
 
 main {
-  margin: 0 30px 0 30px;
+  margin: 0 5px 0 5px;
 }
 main .section {
-  margin: 0 65px 0 65px;
+  margin: 0 35px 0 35px;
 }
 
 footer {
@@ -50,6 +51,22 @@ footer .foot {
   padding: 10px;
   text-align: center;
   font-size: 15px;
+  width: max-content;
+}
+@media screen and (max-width: 659px) {
+  footer .foot {
+    flex-wrap: wrap;
+    font-size: 12px;
+    justify-content: center;
+  }
+}
+@media screen and (max-height: 812px) {
+  footer .foot {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -75px;
+    gap: 5px;
+  }
 }
 footer .foot .patreon {
   display: flex;
@@ -168,10 +185,12 @@ h1 {
 }
 
 .borgir {
-  position: relative;
-  width: 35px;
+  position: fixed;
+  width: 40px;
   cursor: pointer;
   display: none;
+  right: 0;
+  margin: 10px;
   appearance: none;
   background: none;
   outline: none;
@@ -198,10 +217,12 @@ h1 {
 }
 
 .mobile-menu {
-  display: block;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
   top: 0;
-  left: -100%;
+  right: -100%;
   width: 200px;
   height: 100%;
   background-color: #202029;
@@ -216,25 +237,27 @@ h1 {
   background-color: #475f45;
 }
 .mobile-menu.active {
-  left: 0;
+  right: 0;
 }
 .mobile-menu ul {
+  margin-top: 100px;
   list-style-type: none;
-  position: relative;
-  top: 50px;
+  width: 100%;
   padding: 0;
-  margin: 5px;
+}
+.mobile-menu ul li {
+  margin: 0 10px;
 }
 .mobile-menu ul li .menui {
   background-color: #333333;
-  border-radius: 10px;
+  border-radius: 30px;
   color: #ffffff;
   cursor: pointer;
   font-size: 20px;
-  width: 60%;
-  height: 10% px;
-  margin: 10px;
-  padding: 5px;
+  width: 100%;
+  height: 10%;
+  margin: 5px 0;
+  padding: 10px;
   text-align: center;
   border: none;
   transition: background-color 0.3s ease-in-out;
@@ -279,7 +302,7 @@ h1 {
   cursor: pointer;
   width: 50px;
   height: 50px;
-  margin: 10px;
+  margin: 5px 0;
   padding: 5px;
   text-align: center;
   border: none;
@@ -349,7 +372,7 @@ h1 {
   main {
     position: absolute;
     top: 15px;
-    margin: 30px;
+    margin: 5px;
   }
   .cards {
     grid-template-columns: repeat(auto-fit, 100%);
