@@ -1,589 +1,95 @@
-// vars
-$bg-color: #11141a;
-$top-bg: #202029;
-$top-button: #333333;
-$top-button-active: #6264a3;
-$top-button-ahover: #7376b8;
-$card-bg: #0d0d14;
-$text-colour: #ffffff;
-// neon
-$nbg-color: #3F0071;
-$ntop-bg: #4e0d83;
-$ntop-button: #FB2576;
-$ntop-button-active: #1b35ca;
-$ntop-button-ahover: #3b6fe0;
-$ncard-bg: #1d0035;
-// green
-$gbg-color: #557153;
-$gtop-bg: #475f45;
-$gtop-button: #7D8F69;
-$gtop-button-active: #A9AF7E;
-$gtop-button-ahover: #E6E5A3;
-$gcard-bg: #2b4229;
-
-$main-margin: 5px;
+// var
 
 // css
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
 
-* {
-  font-family: "DM mono", monospace;
-  color: $text-colour;
+*{
+    font-family: "Atkinson Hyperlegible Mono", sans-serif;
+    color: #fff;
 }
 
-body {
-    background-color: $bg-color;
-    font-size: 20px;
-    margin: 0px;
-    transition: background-color 0.3s ease-in-out;
+body{
+    background-color: #000;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.nav{
     display: flex;
     flex-direction: column;
-    word-wrap: break-word;
-    min-height: 100vh;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    justify-content: space-between;
-
-  &.neon{
-    background-color: $nbg-color;
-  }
-
-  &.green{
-    background-color: $gbg-color;
-  }
-}
-
-.qhover{
-  cursor: help;
-  text-decoration: underline dotted;
-}
-
-main {
-  margin: 0 $main-margin 0 $main-margin;
-
-  .section{
-    margin: 0 10px;
-  }
-}
-
-footer{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-
-
-  .foot {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    background-color: #111;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
     gap: 5px;
-    padding: 10px;
-    text-align: center;
-    font-size: 15px;
-    width: max-content;
-    align-items: center;
+    margin: 0 auto;
 
-    @media screen and (max-width: 659px) {
-        flex-wrap: wrap;
-        font-size: 12px;
-        justify-content: center;
-    
-        @media screen and (max-height: 883px) {
-          flex-direction: column;
-          align-items: center;
-          margin-bottom: -75px;
+    a{
+        text-decoration: none;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-size: large;
+
+        &:hover{
+            background-color: #222;
         }
+    }
+}
 
-        @media screen and (max-height: 760px) {
-          flex-direction: column;
-          align-items: center;
-          margin-bottom: -150px;
-        }
+.content{
+    margin: 10px 5px;
+    background-color: #111;
+    padding: 5px 20px;
+    border-radius: 5px;
+    height: 100%;
 
-        @media screen and (max-height: 686px) {
-          flex-direction: column;
-          align-items: center;
-          margin-bottom: -275px;
-        }
-      }
-
-      &.project-footer{
-        @media screen and (max-width: 659px) {
-          flex-wrap: wrap;
-          font-size: 12px;
-          justify-content: center;
-
-          @media screen and (max-height: 926px) {
-            position: absolute;
-            bottom: 0;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: -250px;
-          }
-
-          @media screen and (max-height: 854px) {
-            position: absolute;
-            bottom: 0;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: -400px;
-          }
-
-          @media screen and (max-height: 667px) {
-            position: absolute;
-            bottom: 0;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: -500px;
-          }
-        }
-      }
-
-      .patreon {
+    .container{
         display: flex;
+        justify-content: center;
         align-items: center;
-  
-        .heart-gif {
-          width: 50px;
-          height: 50px;
-        }
-      }
-    }
-}
 
-h1 {
-  font-size: 35px;
-  word-wrap: break-word;
-}
-
-.contacts {
-  display: grid;
-  grid-template-areas:
-  "gmail id"
-  "youtube channel"
-  "discord server"
-  "github user"
-  "insta tag"
-  "twitter at"
-  "tumblr blog";
-  width: max-content;
-
-  .item{
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    text-align: left;
-  }
-}
-
-.top-bar {
-  background-color: $top-bg;
-  width: 100%;
-  display: flex;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-
-  &.neon{
-    background-color: $ntop-bg;
-  }
-
-  &.green{
-    background-color: $gtop-bg;
-  }
-
-  .topb {
-    background-color: $top-button;
-    border-radius: 20px;
-    color: $text-colour;
-    cursor: pointer;
-    font-size: 20px;
-    width: 150px;
-    height: 60px;
-    margin: 10px;
-    padding: 5px;
-    text-align: center;
-    border: none;
-    transition: all 0.3s ease-in-out;
-
-
-    &.neon{
-      background-color: $ntop-button;
-
-      &:hover {
-        background-color: $ntop-button-active;
-      }
-    }
-
-    &.green{
-      background-color: $gtop-button;
-
-      &:hover {
-        background-color: $gtop-button-active;
-      }
-    }
-
-    &:hover {
-      background-color: $top-button-active;
-    }
-  }
-
-  .topba {
-    background-color: $top-button-active;
-    transition: background-color 0.3s ease-in-out;
-
-    &.neon {
-      background-color: $ntop-button-active;
-
-      &:hover {
-        background-color: $ntop-button-ahover;
-      }
-    }
-
-    &.green {
-      background-color: $gtop-button-active;
-
-      &:hover {
-        background-color: $gtop-button-ahover;
-      }
-    }
-
-    &:hover {
-      background-color: $top-button-ahover;
-    }
-  }
-
-  .site-colours {
-    background-color: $top-button-active;
-    border-radius: 100%;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    padding: 5px;
-    text-align: center;
-    border: none;
-    float: right;
-    transition: background-color 0.3s ease-in-out;
-
-    &:hover {
-      background-color: $top-button-ahover;
-    }
-
-    &.neon {
-      background-color: $ntop-button-active;
-
-      &:hover {
-        background-color: $ntop-button-ahover;
-      }
-    }
-
-    &.green {
-      background-color: $gtop-button-active;
-
-      &:hover {
-        background-color: $gtop-button-ahover;
-      }
-    }
-  }
-}
-
-.borgir {
-  position: fixed;
-  width: 40px;
-  cursor: pointer;
-  display: none;
-  right: 0;
-  margin: 10px;
-  appearance: none;
-  background: none;
-  outline: none;
-  border: none;
-  z-index: 100;
-
-  .bar, &:before, &:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color: $text-colour;
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-
-  &.active:before {
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-
-  &.active .bar {
-    opacity: 0;
-  }
-
-  &.active:after {
-    transform: rotate(45deg) translate(-8px, -4.5px);
-  }
-}
-
-.mobile-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 200px;
-  height: 100%;
-  background-color: $top-bg;
-  overflow: hidden;
-  z-index: 99;
-  transition: all 0.3s ease-in-out;
-
-  &.neon{
-    background-color: $ntop-bg;
-  }
-
-  &.green{
-    background-color: $gtop-bg;
-  }
-
-  &.active {
-    right: 0;
-  }
-
-  ul {
-    margin-top: 100px;
-    list-style-type: none;
-    width: 100%;
-    padding: 0;
-
-    li{
-      margin: 0 10px;
-
-      .menui {
-        background-color: $top-button;
-        border-radius: 30px;
-        color: $text-colour;
-        cursor: pointer;
-        font-size: 20px;
-        width: 100%;
-        height: 10%;
-        margin: 5px 0;
-        padding: 10px;
-        text-align: center;
-        border: none;
-        transition: background-color 0.3s ease-in-out;
-
-
-        &.neon {
-          background-color: $ntop-button;
-
-          &:hover {
-            background-color: $ntop-button-active;
-          }
+        ul{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex-wrap: wrap;
+            text-align: center;
+            width: max-content;
         }
 
-        &.green {
-          background-color: $gtop-button;
+        li{
+            list-style: none;
+            padding: 10px;
+            background-color: #222;
+            border-radius: 5px;
+            transition: background-color 0.3s;
 
-          &:hover {
-            background-color: $gtop-button-active;
-          }
+            &:hover{
+                background-color: #333;
+            }
+
+            a:hover{
+                color: #000;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: large;
+                background-color: #aaa;
+                border-radius: 5px;
+                padding: 0 10px;
+                transition: all 0.3s;
+            }
         }
 
-        &:hover {
-          background-color: $top-button-active;
-        }
-      }
-
-      .menuia {
-        background-color: $top-button-active;
-        transition: background-color 0.3s ease-in-out;
-
-        &.neon {
-          background-color: $ntop-button-active;
-
-          &:hover {
-            background-color: $ntop-button-ahover;
-          }
-        }
-
-        &.green {
-          background-color: $gtop-button-active;
-
-          &:hover {
-            background-color: $gtop-button-ahover;
-          }
-        }
-
-        &:hover {
-          background-color: $top-button-ahover;
-        }
-      }
     }
-  }
-
-  .msite-colours{
-    background-color: $top-button-active;
-    border-radius: 100%;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    margin: 5px 0;
-    padding: 5px;
-    text-align: center;
-    border: none;
-    transition: background-color 0.3s ease-in-out;
-
-    &.neon{
-      background-color: $ntop-button-active;
-    }
-
-    &.green{
-      background-color: $gtop-button-active;
-    }
-  }
-}
-
-.cards {
-  margin: 0 15px 0 15px;
-  max-width: 2000px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
-  grid-auto-rows: auto;
-
-  * {
-    box-sizing: border-box;
-  }
-
-  .card{
-    height: 200px;
-    width: 380px;
-    text-align: center;
-    background: $card-bg;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 20px;
-    border-bottom: 10px solid $top-button-ahover;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    
-    &:hover{
-      cursor: pointer;
-      position: relative;
-      top: -5px;
-      box-shadow: 0 10px 5px 0 #000000f1;
-    }
-
-    &.neon{
-      background: $ncard-bg;
-      border-bottom: 10px solid $ntop-button-ahover;
-    }
-
-    &.green{
-      background: $gcard-bg;
-      border-bottom: 10px solid $gtop-button-ahover;
-    }
-  }
-}
-
-// responsive
-@media screen and (max-width: 659px) {
-  .topb {
-    display: none;
-  }
-  .site-colours{
-    display: none;
-  }
-  // unhide top bar
-  .top-bar {
-    display: grid;
-    grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr;
-  }
-  // borgir
-  .borgir {
-    display: block;
-  }
-  main {
-    position: absolute;
-    top: 15px;
-    margin: $main-margin;
-  }
-  .cards{
-    // change to flexbox
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .card{
-      width: 90%;
-    }
-  }
-}
-
-#cookie-banner{
-  width: 75%;
-  height: 75%;
-  z-index: 10000000;
-  background-color: #1b1b1b;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 10px;
-  box-shadow: #000000 0 0 10px;
-  display: none;
-  justify-content: center;
-  align-items: center;
-
-  #sys {
-    width: 128px;
-    height: 128px;
-  }
-
-  .cookie-btn {
-    background-color: #5a6470;
-    border: none;
-    color: #ffffff;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-
-    &:hover {
-      background-color: #353333;
-      color: #5a6470;
-    }
-  }
-
-  #cookie-deny {
-    opacity: 0.01;
-    background-color: #ffffff;
-    color: #000000;
-
-    &:hover {
-      opacity: 1;
-      background-color: #353333;
-      color: #5a6470;
-    }
-  }
-}
-
-//make the cookie banner responsive
-@media screen and (max-width: 659px) {
-  #cookie-banner{
-    width: 85%;
-    height: 85%;
-    flex-direction: column;
-    text-align: center;
-  }
-  .cookie-btn{
-    font-size: 16px;
-    margin: 5px;
-  }
 }

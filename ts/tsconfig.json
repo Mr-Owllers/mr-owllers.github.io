@@ -1,7 +1,0 @@
-{
-    "compilerOptions": {
-        "target": "esnext",
-        "lib": ["esnext", "dom"],
-        "outDir": "../js"
-    }
-}
